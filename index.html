@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Formularz ajax</title>
+
+  <meta charset="utf-8">
+  <link href="plik.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+  <script src="js/valid.js" type="text/javascript"></script>
+
+</head>
+<div id="mojdiv"> </div>
+<body>
+<button id="open-contact-btn" class="about-link">
+  <i class="fa fa-envelope-o" aria-hidden="true"></i> Formularz kontaktowy
+</button>
+<button type="button" id="close-contact-btn" class="close-btn">
+    <i class="fa fa-times close-form" aria-hidden="false">close</i>
+  </button>
+  
+<div id="contact" class="contact">
+  <form class="emailForm" method="POST" action="emailforms.php">
+  
+  <label>
+      Twoje Imie: 
+      <input name="name" placeholder="Wpisz tu swoje imie" required>
+    </label>
+    <label>
+    Twoje Nazwisko:
+      <input name="surname"placeholder="Wpisz tu swoje nazwisko" required>
+    </label>
+    <label>
+      Twój zawód:
+      <input name="trade" placeholder="Wpisz tu swój zawód" required>
+    </label>
+    <label>
+      Twój numer telefonu:
+      <input name="number"  placeholder="Wpisz tu swój numer telefonu" pattern="[0-9]*[0-9]{8}" required>
+    </label>
+    <label>
+    Twoja data urodzenia:
+      <input name="date" type="date" placeholder="Wybierz swoją date urodzenia" required>
+    </label>
+    <label>
+      Twój adres email:
+      <input name="email" type="email" placeholder="Wpisz tu swój adres email" required>
+    </label>
+    
+  
+    <button class="emailFormSubmit" name="submit" type="submit">Wyślij</button>
+
+    <div class="emailFormAlert"></div>
+  </form>
+
+ 
+</div>
+</body>
+</html>
